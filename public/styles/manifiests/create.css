@@ -1,0 +1,18 @@
+select,
+input,
+select option {
+    background-color: #000000 !important;
+    color: #ffffff;
+    width: 90%;
+}
+
+tbody tr,
+#separator {
+    border-bottom: 2rem solid transparent;
+    /* Define un borde inferior de 1 píxel sólido gris */
+}
+
+#separator {
+    border-bottom: 4rem solid transparent;
+    /* Define un borde inferior de 1 píxel sólido gris */
+}

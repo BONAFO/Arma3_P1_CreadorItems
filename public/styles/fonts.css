@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+.oswald-reg {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.oswald-bolt {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.oswald-ita-reg {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.oswald-ita-bolt {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: italic;
+}

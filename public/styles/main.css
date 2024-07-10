@@ -1,0 +1,46 @@
+@import url("fonts.css");
+.background {
+    background-image: url("https://arma3.com/assets/img/wallpapers/artwork/2/thumb.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100vw;
+    height: 100vh;
+    opacity: .8;
+    z-index: -1;
+}
+
+body {
+    background-color: #000000;
+}
+
+button,
+label,
+select {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+#table {
+    margin: 3% 1%;
+}
+
+.nav-btn {
+    background-color: #fffb1fd2;
+    border: 1px solid #000000;
+    border: 10%;
+    padding: .3% 2%;
+}
+
+.label-table {
+    font-size: 5vh;
+    color: #ffffff;
+}
