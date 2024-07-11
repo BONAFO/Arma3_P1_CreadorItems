@@ -2,8 +2,13 @@
     "weapons",
     "aditaments",
     "food",
-    "water",
+    "drink",
     "clothes",
     "ammo",
-    "backpacks"
+    "backpacks",
+    "nvg",
+    "googles",
+    "helmets",
+    "harness"
+
 ]

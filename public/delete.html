@@ -11,11 +11,14 @@
     <script src="js/normalizate.js"></script>
     <link rel="stylesheet" href="styles/manifiests/index.css">
     <link rel="stylesheet" href="styles/manifiests/create.css">
+    <link rel="stylesheet" href="styles/manifiests/delete.css">
 
     <title>Document</title>
 </head>
 
 <body>
+
+
 
     <div class="background">
 
@@ -32,26 +35,22 @@
                 <tr>
                     <td class="w-25"><label class="label-table" for="">Item Type</label></td>
                     <td><select class="label-table create-input" name="type" id="select-nomen">
-                        <option value=""></option>
-                    </select></td>
+                            <option value=""></option>
+                        </select></td>
                 </tr>
                 <tr id="separator"></tr>
-
             </thead>
-            <tbody id="tbody">
-
-            </tbody>
         </table>
-    </div>
 
 
-    <div>
-        <button id="create-btn" class="h2 nav-btn ml-5">CREATE</button>
-    </div>
+        <div id="items">
 
-    <script src="./js/createNav.js"></script>
-    <script src="./js/nav.js"></script>
-    <script src="./js/create.js"></script>
+        </div>
+
+
+        <script src="./js/createNav.js"></script>
+        <script src="./js/nav.js"></script>
+        <script src="./js/delete.js"></script>
 </body>
 
 </html>

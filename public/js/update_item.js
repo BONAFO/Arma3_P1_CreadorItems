@@ -1,9 +1,12 @@
 (async() => {
     const response = (await axios.get("/create/nomencladores")).data.data
-    build_nomen(response)
+    const base = "/update/";
+    const id = window.location.pathname.replace(base, "");
+    const response_item = (await axios.get("/get/item/" + id)).data.data;
+    build_nomen(response, response_item)
 })()
 
-const build_nomen = (nomencladores) => {
+const build_nomen = (nomencladores, item) => {
     const selector = document.getElementById("select-nomen");
     nomencladores.map(nom => {
         const opt = document.createElement("option");
@@ -11,13 +14,19 @@ const build_nomen = (nomencladores) => {
         selector.append(opt)
     })
 
+
+    selector.value = item.type;
+    evaluate_type(item.type, item)
+
+
+
     selector.onchange = (e) => {
-        evaluate_type(e.target.value)
+        evaluate_type(e.target.value, item)
     }
 
 }
 
-const evaluate_type = (type) => {
+const evaluate_type = (type, predata = {}) => {
     let elements = [
 
         document.createElement("input"),
@@ -26,13 +35,14 @@ const evaluate_type = (type) => {
         document.createElement("input"),
     ];
 
-    elements[0].type = "number";
+    elements[0].type = "hidden";
     elements[2].type = "number";
 
     elements[0].name = "id";
     elements[1].name = "name";
     elements[2].name = "price";
     elements[3].name = "imgUrl";
+
 
     // "name"
     // "id"
@@ -123,6 +133,8 @@ const evaluate_type = (type) => {
         element.className += 'label-table create-input';
         label.textContent = normalizate(element.name);
 
+        element.value = predata[element.name] || '';
+
         tbody.append(tr)
         tr.append(td1)
         td1.append(label)
@@ -142,19 +154,21 @@ document.getElementById("create-btn").onclick = async() => {
 
     }
 
+
+
     try {
-        const response = (await axios.post('/create', data))
+        const response = (await axios.put('/update', data))
         alert(response.status)
 
 
-        if (response.status == 200) {
-            for (let i = 0; i < inputs.length; i++) {
-                // data[inputs[i].name] = inputs[i].value;
-                if (inputs[i].name != 'type') {
-                    inputs[i].value = '';
-                }
-            }
-        }
+        // if (response.status == 200) {
+        //     for (let i = 0; i < inputs.length; i++) {
+        //         // data[inputs[i].name] = inputs[i].value;
+        //         if (inputs[i].name != 'type') {
+        //             inputs[i].value = '';
+        //         }
+        //     }
+        // }
 
 
     } catch (error) {

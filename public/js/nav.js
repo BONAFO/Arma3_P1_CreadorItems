@@ -19,7 +19,7 @@ const nav_elements = [{
                 class: "h2 nav-btn"
             },
             a: {
-                href: "/remove"
+                href: "/delete"
             },
 
         }
